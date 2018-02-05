@@ -10,10 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="?android:dividerHorizontal"
-        android:dividerPadding="16dp"
-        android:orientation="horizontal"
-        android:showDividers="middle">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -73,11 +70,11 @@
                 android:text="Freethrow" />
         </LinearLayout>
 
-        <!--        <view
-                    android:id="@+id/div"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/darker_gray"> </view>-->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
 
         <LinearLayout
             android:layout_width="0dp"
