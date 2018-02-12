@@ -7,36 +7,45 @@
     android:orientation="vertical"
     tools:context="com.example.android.courtcounter.MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/scorekeepback"
+        android:contentDescription="Background provided by www.freepik.com/free-photos-vectors/background Background vector created by Freepik"
+        android:scaleX="2" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="11dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="Team A"
-                android:textColor="#616161"
-                android:textSize="14sp" />
+                android:fontFamily="@font/collegeblock"
+                android:text="@string/Team_1"
+                android:textColor="@color/teamColor"
+                android:textSize="35sp" />
 
             <TextView
-                android:id="@+id/team_a_score"
+                android:id="@+id/home_team_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
-                android:text="0"
-                android:textColor="#000000"
+                android:fontFamily="@font/collegiateheavyoutlinemedium"
+                android:text="@string/Home_Score"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="56sp" />
 
             <Button
@@ -46,61 +55,126 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
-                android:onClick="threepoints"
-                android:text="3 Points" />
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/collegeblock"
+                android:onClick="tdHome"
+                android:text="@string/touchdown"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
 
             <Button
+                android:id="@+id/twoHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/collegeblock"
+                android:onClick="plus2Home"
+                android:text="@string/_2"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/oneHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/collegeblock"
+                android:onClick="plus1Home"
+                android:text="@string/_1"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/cancelHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/collegeblock"
+                android:onClick="cancelHome"
+                android:text="@string/cancel"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/fgHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="8dp"
-                android:onClick="twopoints"
-                android:text="2 Points" />
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/collegeblock"
+                android:onClick="fgHome"
+                android:text="@string/field_goal"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
 
             <Button
+                android:id="@+id/safetyHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="8dp"
-                android:onClick="freethrow"
-                android:text="Freethrow" />
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/collegeblock"
+                android:onClick="safetyHome"
+                android:text="@string/safety"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
         </LinearLayout>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:background="@android:color/darker_gray" />
+        <!--
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/darker_gray" />
+        -->
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="11dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="Team B"
-                android:textColor="#616161"
-                android:textSize="14sp" />
+                android:fontFamily="@font/collegeblock"
+                android:text="@string/Team_2"
+                android:textColor="@color/teamColor"
+                android:textSize="35sp" />
 
             <TextView
-                android:id="@+id/team_b_score"
+                android:id="@+id/away_team_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
-                android:text="0"
-                android:textColor="#000000"
+                android:fontFamily="@font/collegiateheavyoutlinemedium"
+                android:text="@string/Away_Score"
+                android:textColor="@android:color/darker_gray"
                 android:textSize="56sp" />
 
             <Button
@@ -110,28 +184,90 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="24dp"
-                android:onClick="threepointsb"
-                android:text="3 Points" />
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/collegeblock"
+                android:onClick="tdAway"
+                android:text="@string/touchdown"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
 
             <Button
+                android:id="@+id/twoAway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/collegeblock"
+                android:onClick="plus2Away"
+                android:text="@string/_2"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/oneAway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/collegeblock"
+                android:onClick="plus1Away"
+                android:text="@string/_1"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/cancelAway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/collegeblock"
+                android:onClick="cancelAway"
+                android:text="@string/cancel"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/fgAway"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="8dp"
-                android:onClick="twopointsb"
-                android:text="2 Points" />
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/collegeblock"
+                android:onClick="fgAway"
+                android:text="@string/field_goal"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
 
             <Button
+                android:id="@+id/safetyAway"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginTop="8dp"
-                android:onClick="freethrowb"
-                android:text="Freethrow" />
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/collegeblock"
+                android:onClick="safetyAway"
+                android:text="@string/safety"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -141,7 +277,11 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/collegeblock"
         android:onClick="scoreReset"
-        android:text="Reset" />
+        android:text="@string/reset"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
 
 </RelativeLayout>

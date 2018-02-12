@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Court Counter</string>
+    <string name="Team_1">HOME</string>
+    <string name="Team_2">AWAY</string>
+    <string name="Home_Score">0</string>
+    <string name="Away_Score">0</string>
+    <string name="touchdown">Touchdown</string>
+    <string name="_2">+2</string>
+    <string name="_1">+1</string>
+    <string name="cancel">Cancel</string>
+    <string name="field_goal">Field Goal</string>
+    <string name="safety">Safety</string>
+    <string name="reset">Reset</string>
+
 </resources>
