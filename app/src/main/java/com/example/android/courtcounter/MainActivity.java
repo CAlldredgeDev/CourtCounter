@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showSecondaryScoreHome(View view) {
+        Button touchdown = findViewById(R.id.tdHome);
+        touchdown.setVisibility(View.GONE);
         Button twoHome = findViewById(R.id.twoHome);
         twoHome.setVisibility(View.VISIBLE);
         Button oneHome = findViewById(R.id.oneHome);
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void hideSecondaryScoreHome(View view) {
+        Button touchdown = findViewById(R.id.tdHome);
+        touchdown.setVisibility(View.VISIBLE);
         Button twoHome = findViewById(R.id.twoHome);
         twoHome.setVisibility(View.GONE);
         Button oneHome = findViewById(R.id.oneHome);
@@ -90,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showSecondaryScoreAway(View view) {
+        Button touchdown = findViewById(R.id.tdAway);
+        touchdown.setVisibility(View.GONE);
         Button twoAway = findViewById(R.id.twoAway);
         twoAway.setVisibility(View.VISIBLE);
         Button oneAway = findViewById(R.id.oneAway);
@@ -103,6 +109,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void hideSecondaryScoreAway(View view) {
+        Button touchdown = findViewById(R.id.tdAway);
+        touchdown.setVisibility(View.VISIBLE);
         Button twoAway = findViewById(R.id.twoAway);
         twoAway.setVisibility(View.GONE);
         Button oneAway = findViewById(R.id.oneAway);

@@ -5,11 +5,12 @@
     <string name="Home_Score">0</string>
     <string name="Away_Score">0</string>
     <string name="touchdown">Touchdown</string>
-    <string name="_2">+2</string>
-    <string name="_1">+1</string>
+    <string name="_2">Conversion</string>
+    <string name="_1">Extra Point</string>
     <string name="cancel">Cancel</string>
     <string name="field_goal">Field Goal</string>
     <string name="safety">Safety</string>
     <string name="reset">Reset</string>
+    <string name="resource_description">Background provided by www.freepik.com/free-photos-vectors/background Background vector created by Freepik</string>
 
 </resources>
